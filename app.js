@@ -1,29 +1,3 @@
-function sayHello(nameOfPerson, age){
-    console.log("Hello my name is "+ nameOfPerson + " and I'm " + age);
-}
+const age = prompt("How old are you?"); // 자바 스크립트 일시정지
 
-sayHello("nico", 10);
-sayHello("dal", 23);
-
-function plus(a, b){
-    console.log(a + b);
-}
-
-function divide(a,b){
-    console.log(a / b);
-}
-// a , b 는 function박스 안에서만 존재한다. console.log(a); 불가
-plus(8, 60);
-divide(98, 2);
-
-const player = {
-name: "nico",
-sayHello: function(OtherPersonsName){
-console.log("hello! " + OtherPersonsName+ " nice to meet you");
-    },
-};
-console.log(player.name);
-player.sayHello("lynn");
-player.sayHello("nico");
-
-
+console.log(typeof "15", typeof parseInt("15")); // parseInt String-> Int로 숫자가 아닌걸 넣으면 NaN으로 나옴
