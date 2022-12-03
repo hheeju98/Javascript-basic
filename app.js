@@ -1,13 +1,19 @@
+const player = {
+    name: "nico",
+    points: 10,
+    fat: true,
+};
 
-const daysOfWeek = ["mon" , "tue" , "wed" , "thu" ,"fri" , "sat"];
+console.log(player);
 
-// Get Item from Array
-console.log(daysOfWeek);
-
-// Add one more date to the array
-daysOfWeek.push("sun");
-
-console.log(daysOfWeek);
+player.fat = false;
+// const 안의 무언가는 업데이트 가능, 전체는 불가능
+player.lastName = "patato";
+player.points = player.points + 15;
+console.log(player);
+//console.log(player.name);
+//console.log(player["name"]);
+// console = object
 
 
 
