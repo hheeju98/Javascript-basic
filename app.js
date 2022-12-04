@@ -1,6 +1,3 @@
-const title = document.getElementById("title");
+const title = document.querySelector(".hello h1"); // querySelector 조건에 맞는 첫번째 값만 가져옴 (querySelectorAll 다가져옴)
 
-title.innerText = "Got you!"; 
-
-console.log(title.id);
-console.log(title.className);
+console.log(title);
