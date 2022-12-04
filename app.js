@@ -1,20 +1,40 @@
-const title = document.querySelector(".hello h1"); // querySelector 조건에 맞는 첫번째 값만 가져옴 (querySelectorAll 다가져옴)
-
-console.dir(title);
+const h1 = document.querySelector("div.hello:first-child h1"); // querySelector 조건에 맞는 첫번째 값만 가져옴 (querySelectorAll 다가져옴)
 
 function handleTitleClick(){
-    title.style.color = "blue";
+    h1.style.color = "blue";
 }
 
 function handleMouseEnter(){
-title.innerText = "Mouse is here!";
+h1.innerText = "Mouse is here!";
 }
 
 function handleMouseLeave(){
-title.innerText = "Mouse is gone!";
+h1.innerText = "Mouse is gone!";
 }
 
+function handleWindowResize(){
+    document.body.style.backgroundColor = "tomato";
+}
 
-title.addEventListener("click", handleTitleClick);
-title.addEventListener("mouseenter", handleMouseEnter);
-title.addEventListener("mouseleave", handleMouseLeave);
+function handleWindowCopy(){
+    alert("copier!");
+}
+
+function handleWindowOffline(){
+    alert("SOS no Wifi");
+}
+
+function handleWindowOnline(){
+    alert("ALL GOOD");
+}
+
+// h1.onclick = handleTitleClick;
+// h1.onmouseenter = handleMouseEnter;
+h1.addEventListener("click", handleTitleClick);
+h1.addEventListener("mouseenter", handleMouseEnter);
+h1.addEventListener("mouseleave", handleMouseLeave);
+
+window.addEventListener("resize", handleWindowResize);
+window.addEventListener("copy", handleWindowCopy);
+window.addEventListener("offline", handleWindowOffline);
+window.addEventListener("online", handleWindowOnline);
